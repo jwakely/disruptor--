@@ -25,6 +25,8 @@
 
 #include <array>
 #include <vector>
+#include <stdexcept>
+#include <cstdint>
 
 #include "disruptor/interface.h"
 #include "disruptor/claim_strategy.h"
@@ -63,6 +65,7 @@ class RingBuffer : public Sequencer {
             buffer_size_(buffer_size),
             mask_(buffer_size - 1),
             events_(event_factory->NewInstance(buffer_size)) {
+        check_buffer_size();
     }
 
     ~RingBuffer() {
@@ -73,7 +76,7 @@ class RingBuffer : public Sequencer {
     //
     // @param sequence for the event
     // @return event pointer at the specified sequence position.
-    T* Get(const int64_t& sequence) {
+    T* Get(const std::int64_t& sequence) {
         return &events_[sequence & mask_];
     }
 
@@ -82,6 +85,22 @@ class RingBuffer : public Sequencer {
     int buffer_size_;
     int mask_;
     T* events_;
+
+    void check_buffer_size() {
+        if (buffer_size_ > 1) {
+            // Round down to next power of two.
+            std::uint32_t x = buffer_size_;
+            x = x | (x >> 1);
+            x = x | (x >> 2);
+            x = x | (x >> 4);
+            x = x | (x >> 8);
+            x = x | (x >> 16);
+            x -= (x >> 1);
+            if (x == buffer_size_)
+                return;
+        }
+        throw std::invalid_argument("buffer size must be power of two");
+    }
 
     DISALLOW_COPY_AND_ASSIGN(RingBuffer);
 };
