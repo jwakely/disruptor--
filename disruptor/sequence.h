@@ -131,8 +131,8 @@ int64_t GetMinimumSequence(
         }
 
         return minimum;
-};
+}
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_SEQUENCE_H_ NOLINT

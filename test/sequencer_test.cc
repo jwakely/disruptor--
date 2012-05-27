@@ -207,5 +207,5 @@ BOOST_FIXTURE_TEST_CASE(ShouldHoldUpPublisherWhenRingIsFull, SequencerFixture) {
 
 BOOST_AUTO_TEST_SUITE_END()
 
-}; // namepspace test
-}; // namepspace disruptor
+} // namepspace test
+} // namepspace disruptor

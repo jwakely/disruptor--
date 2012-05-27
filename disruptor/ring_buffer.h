@@ -86,6 +86,6 @@ class RingBuffer : public Sequencer {
     DISALLOW_COPY_AND_ASSIGN(RingBuffer);
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_RING_BUFFER_H_ NOLINT

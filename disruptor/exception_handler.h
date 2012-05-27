@@ -54,6 +54,6 @@ class FatalExceptionHandler: public ExceptionHandlerInterface<T> {
     }
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_EXCEPTION_HANDLER_H_  NOLINT

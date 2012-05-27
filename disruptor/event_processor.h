@@ -124,6 +124,6 @@ class BatchEventProcessor : public EventProcessorInterface<T> {
 };
 
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_EVENT_PROCESSOR_H_ NOLINT

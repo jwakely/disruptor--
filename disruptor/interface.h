@@ -265,6 +265,6 @@ class WaitStrategyInterface {
     virtual void SignalAllWhenBlocking() = 0;
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_INTERFACE_H_ NOLINT

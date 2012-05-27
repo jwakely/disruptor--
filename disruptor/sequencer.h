@@ -185,6 +185,6 @@ class Sequencer {
     DISALLOW_COPY_AND_ASSIGN(Sequencer);
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_RING_BUFFER_H_ NOLINT
