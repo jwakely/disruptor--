@@ -51,7 +51,7 @@ class LongEventFactory : public EventFactoryInterface<LongEvent> {
     }
 };
 
-}; // namespace test
-}; // namespace disruptor
+} // namespace test
+} // namespace disruptor
 
 #endif // DISRUPTOR_TEST_LONG_EVENT_H_ NOLINT

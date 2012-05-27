@@ -84,6 +84,6 @@ class ProcessingSequenceBarrier : SequenceBarrierInterface {
     std::atomic<bool> alerted_;
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_DEPENDENCY_BARRIER_H_ NOLINT

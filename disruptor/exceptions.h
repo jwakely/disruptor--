@@ -33,6 +33,6 @@ namespace disruptor {
 class AlertException : public std::exception {
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_EXCEPTIONS_H_  NOLINT

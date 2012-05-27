@@ -45,6 +45,6 @@ class EventPublisher {
     RingBuffer<T>* ring_buffer_;
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif

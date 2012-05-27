@@ -65,6 +65,6 @@ class BatchDescriptor {
     int64_t end_;
 };
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_SEQUENCE_BATCH_H_  NOLINT

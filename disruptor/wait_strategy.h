@@ -376,6 +376,6 @@ WaitStrategyInterface* CreateWaitStrategy(WaitStrategyOption wait_option) {
 }
 
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_WAITSTRATEGY_H_  NOLINT

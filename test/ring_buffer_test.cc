@@ -85,7 +85,7 @@ std::vector<StubEvent> Waiter(RingBuffer<StubEvent>* ring_buffer,
         results.push_back(*ring_buffer->Get(i));
 
     return results;
-};
+}
 
 
 
@@ -257,5 +257,5 @@ BOOST_FIXTURE_TEST_CASE(ShouldPreventPublishersOvertakingEventProcessorWrapPoint
 
 BOOST_AUTO_TEST_SUITE_END()
 
-}; // namespace test
-}; // namespace disruptor
+} // namespace test
+} // namespace disruptor

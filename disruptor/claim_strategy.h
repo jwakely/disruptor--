@@ -225,8 +225,8 @@ ClaimStrategyInterface* CreateClaimStrategy(ClaimStrategyOption option,
         default:
             return NULL;
     }
-};
+}
 
-};  // namespace disruptor
+}  // namespace disruptor
 
 #endif // DISRUPTOR_CLAIM_STRATEGY_H_ NOLINT
