@@ -39,8 +39,8 @@ class ProcessingSequenceBarrier : SequenceBarrierInterface {
     ProcessingSequenceBarrier(WaitStrategyInterface* wait_strategy,
                               Sequence* sequence,
                               const std::vector<Sequence*>& sequences) :
-        cursor_(sequence),
         wait_strategy_(wait_strategy),
+        cursor_(sequence),
         dependent_sequences_(sequences),
         alerted_(false) {
     }

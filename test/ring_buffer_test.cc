@@ -92,7 +92,7 @@ std::vector<StubEvent> Waiter(RingBuffer<StubEvent>* ring_buffer,
 class TestEventProcessor : public EventProcessorInterface<StubEvent> {
  public:
     TestEventProcessor(SequenceBarrierInterface* barrier) :
-        barrier_(barrier) , sequence_(kInitialCursorValue) {}
+        sequence_(kInitialCursorValue), barrier_(barrier) {}
 
     virtual Sequence* GetSequence() { return &sequence_; }
 
