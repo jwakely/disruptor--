@@ -96,7 +96,7 @@ class RingBuffer : public Sequencer {
             x = x | (x >> 8);
             x = x | (x >> 16);
             x -= (x >> 1);
-            if (x == buffer_size_)
+            if (int(x) == buffer_size_)
                 return;
         }
         throw std::invalid_argument("buffer size must be power of two");
