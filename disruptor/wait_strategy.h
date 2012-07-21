@@ -31,6 +31,8 @@
 #include <chrono>
 #include <thread>
 #include <vector>
+#include <mutex>
+#include <condition_variable>
 
 #include "disruptor/exceptions.h"
 #include "disruptor/interface.h"
